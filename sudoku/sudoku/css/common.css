@@ -1,0 +1,161 @@
+.hide {
+  display: none;
+}
+.hide-font {
+  text-indent: 999rem;
+}
+.make1 {
+  background: #CCCCFF !important;
+}
+.make2 {
+  background: #66CCFF !important;
+}
+.error-mark {
+  background: #FF3300 !important;
+}
+html {
+  font-size: 14px;
+  height: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #eeeeee;
+  font-family: "Menlo", "Monaco", "Consolas", "微软雅黑", "Heiti";
+  overflow: hidden;
+  user-select: none;
+  max-width: 450px;
+  height: 100%;
+  margin: 0px auto;
+}
+body > * {
+  max-width: 450px;
+}
+.main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+header {
+  background: #0099CC;
+  height: 4rem;
+  line-height: 4rem;
+  font-size: 2rem;
+  text-indent: 1rem;
+}
+.setting,
+.tip {
+  background: #FFFFCC;
+  height: 5rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.container {
+  background: #FFFFCC;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.pupop {
+  box-sizing: border-box;
+  border: 1px solid #888888;
+  position: absolute;
+  background: #FFCC99;
+  top: 100px;
+  left: 100px;
+  color: #000033;
+  font-size: 1.4rem;
+  border-width: 1px;
+}
+.pupop > div {
+  box-sizing: border-box;
+}
+.pupop > div span {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 2.2rem;
+  text-align: center;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  border-left: 1px solid #888888;
+  border-top: 1px solid #888888;
+}
+.pupop > div span:last-child {
+  border-right: 1px solid #888888;
+}
+.pupop > div span.right-col {
+  border-right: 1px solid #888888;
+}
+.pupop > div span.default {
+  background: #FFFF99;
+}
+.pupop > div span.empty {
+  background: #FFFFFF;
+}
+.pupop > div:last-child {
+  border-bottom: 1px solid #888888;
+}
+.pupop > div.bottom-row > span {
+  border-bottom: 1px solid #888888;
+}
+.pupop > div.bottom-row:last-child > span {
+  border-bottom: 0px;
+}
+.matrix {
+  box-sizing: border-box;
+  border: 1px solid #888888;
+}
+.matrix > div {
+  box-sizing: border-box;
+}
+.matrix > div span {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 2.2rem;
+  text-align: center;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  border-left: 1px solid #888888;
+  border-top: 1px solid #888888;
+}
+.matrix > div span:last-child {
+  border-right: 1px solid #888888;
+}
+.matrix > div span.right-col {
+  border-right: 1px solid #888888;
+}
+.matrix > div span.default {
+  background: #FFFF99;
+}
+.matrix > div span.empty {
+  background: #FFFFFF;
+}
+.matrix > div:last-child {
+  border-bottom: 1px solid #888888;
+}
+.matrix > div.bottom-row > span {
+  border-bottom: 1px solid #888888;
+}
+.matrix > div.bottom-row:last-child > span {
+  border-bottom: 0px;
+}
+footer {
+  height: 4rem;
+  display: flex;
+  line-height: 4rem;
+  text-align: center;
+}
+footer > button {
+  flex: 1;
+  background: #99CC99;
+  font-size: 1.5rem;
+  color: #ffffff;
+  border-right: 1px solid #888888;
+}
+footer > button:hover {
+  background: #99CC00;
+}
