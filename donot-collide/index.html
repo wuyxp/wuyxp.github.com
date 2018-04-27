@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/common.css">
+  <title>不要碰撞</title>
+</head>
+<body>
+  <div class="container">
+    <div class="title">不要碰撞</div>
+    <div class="main" id="main">
+      <div class="date-time" id="dateTime">
+        0
+      </div>
+    </div>
+  </div>
+  <div class="zone" id="zone">
+    <div class="button" id="begin">开始啊，渣比</div>
+    <div class="date" id="date">3</div>
+    <div class="mask"></div>
+  </div>
+</body>
+<script src="./js/jquery.min.js" ></script>
+<script src="./js/Util.js"></script>
+<script src="./js/draggable.js"></script>
+<script src="./js/barrier.js"></script>
+<script src="./js/init.js"></script>
+<script>
+  window.log = console.log;
+  $(function(){
+    // 处理逻辑
+    var airship = createAirship();
+    var barriers = createBarriers(3, 30, airship, function(){
+      alert('bang!你个垃圾。。。!!!!');
+      clearInterval(datatimer);
+    });
+    var timer; //倒计时
+    var datatimer; // 游戏时间
+
+    $('#begin').click(function(){
+      $('#begin').hide();
+      $('#date').show();
+      timer = setInterval(function(){
+        var num = +$('#date').html();
+        num = num -1;
+        if(num <= 0){
+          clearInterval(timer);
+          $('#zone').hide();          
+          start();
+        }else{
+          $('#date').html(num);
+        }
+      }, 1000)
+    });
+
+    function start(){
+
+      barriers.forEach(element => {
+        element.start();
+      });
+      datatimer = setInterval(function(){
+        var num = +$('#dateTime').html();
+        num = num +1;
+          $('#dateTime').html(num);
+      }, 1000)
+    }
+  })
+</script>
+</html>
